@@ -11,16 +11,41 @@ set showmode
 set esckeys
 
 " get easier to use and more user friendly vim defaults
-" CAUTION: This option breaks some vi compatibility. 
+" CAUTION: This option breaks some vi compatibility.
 "          Switch it off if you prefer real vi compatibility
 set nocompatible
 
-" allow backspacing over everything in insert mode 
+" allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
 " Complete longest common string, then each full match
 " enable this for bash compatible behaviour
 " set wildmode=longest,full
+
+" Set line no
+set nu
+
+" Daniel whitespace marker
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
+hi LineTooLong cterm=bold ctermbg=red guibg=LightYellow
+
+" from lool vimrc
+set autoindent
+set nobackup
+set ruler
+
+" from Perl Best Practices
+set textwidth=78
+set shiftwidth=4
+
+" set list mode and appropriate chars to display tabs, end of lines,
+" wrapping, or trailing spaces
+set list
+set listchars=tab:>-,trail:.,extends:>,precedes:<
+
+" Dictionary
+set dictionary=/usr/share/dict/american-english
 
 " Try to get the correct main terminal type
 if &term =~ "xterm"
@@ -190,48 +215,19 @@ endif
 map! <Esc>[3~ <Delete>
 map  <ESC>[3~    x
 
-" Only do this part when compiled with support for autocommands. 
-if has("autocmd") 
-  " When editing a file, always jump to the last known cursor position. 
-  " Don't do it when the position is invalid or when inside an event handler 
-  " (happens when dropping a file on gvim). 
-  autocmd BufReadPost * 
-    \ if line("'\"") > 0 && line("'\"") <= line("$") | 
-    \   exe "normal g`\"" | 
-    \ endif 
- 
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+
 endif " has("autocmd")
 
 " Changed default required by SuSE security team--be aware if enabling this
 " that it potentially can open for malicious users to do harmful things.
 set modelines=0
 
-" Katik's vimrc
-
-" Set line no
-set nu
-
-" Daniel whitespace marker
-highlight WhitespaceEOL ctermbg=red guibg=red
-match WhitespaceEOL /\s\+$/
-hi LineTooLong cterm=bold ctermbg=red guibg=LightYellow
-
-" from lool vimrc
-set autoindent
-set nobackup
-set ruler
-
-" from Perl Best Practices
-set textwidth=78
-set shiftwidth=4
-
-" set list mode and appropriate chars to display tabs, end of lines,
-" wrapping, or trailing spaces
-set list
-set listchars=tab:>-,trail:.,extends:>,precedes:<
-
-" Dictionary
-set dictionary=/usr/share/dict/american-english
-
-" get easier to use and more user friendly vim defaults
-" /etc/vimrc ends here
