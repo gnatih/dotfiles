@@ -1,0 +1,13 @@
+# sid
+deb http://ftp.de.debian.org/debian/ sid main contrib non-free
+deb-src http://ftp.de.debian.org/debian/ sid main contrib non-free
+
+# experimental
+deb http://ftp.de.debian.org/debian/ experimental main contrib non-free
+deb-src http://ftp.de.debian.org/debian/ experimental main contrib non-free
+
+#debian-multimedia
+deb ftp://ftp.debian-multimedia.org sid main
+
+#emacs
+deb http://emacs.orebokech.com sid main
