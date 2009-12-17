@@ -71,6 +71,7 @@ alias .='pwd'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias cl='clear'
+alias grep='grep --colour=auto'
 
 #make sure we don't do horrible things..
 alias rm='rm -i'
