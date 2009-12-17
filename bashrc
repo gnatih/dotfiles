@@ -65,6 +65,16 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
+#for easy navigation in shell!
+alias cd..='cd ..'
+alias .='pwd'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias cl='clear'
+
+#make sure we don't do horrible things..
+alias rm='rm -i'
+
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 
