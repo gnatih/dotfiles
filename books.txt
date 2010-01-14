@@ -19,3 +19,6 @@ Learning Perl	Schwartz, Phonenix & foy	O'Reilly
 Perl Best Practices	Conway	O'Reilly
 The Art of Community	Bacon	O'Reilly
 The Debian System	Martin F. Krafft	Open Source Press
+Head First Physics	Lang	O'Reilly
+Head First Programming	Barry & Griggiths	O'Reilly
+Stealing the Network: How to Own the Box	Syngress
