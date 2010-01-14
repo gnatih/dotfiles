@@ -1,0 +1,21 @@
+Book	Author(s)	Publisher
+
+Gujarati
+--------
+
+Priya Niki..., 	Chandrakant Baxi	
+Lili Nasoma Pankhar	Chandrakant Baxi	
+
+English
+-------
+
+MADE IN JAPAN	Akio Morita	
+To Kill A Mockingbird	Harper Lee
+
+Computer+Science
+----------------
+
+Learning Perl	Schwartz, Phonenix & foy	O'Reilly
+Perl Best Practices	Conway	O'Reilly
+The Art of Community	Bacon	O'Reilly
+The Debian System	Martin F. Krafft	Open Source Press
