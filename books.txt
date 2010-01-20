@@ -1,27 +1,27 @@
 Book	Author(s)	Publisher
 
 Gujarati
---------
+-----------
 
-Priya Niki..., 	Chandrakant Baxi	
-Lili Nasoma Pankhar	Chandrakant Baxi	
-Aakar	Chandrakant Baxi	
-Khabhe Kothalo Ne Desh Mokalo	Rasmi Bansal (Translator: Sonal Modi)
-Ego	Chandrakant Baxi
-Cosmos	Nagendra Vijay	Uranus Books
+પ્રિય નીકી..., 	ચંદ્રકાંત બક્ષી	
+લીલી નસોમાં પાનખર	ચંદ્રકાંત બક્ષી	
+આકાર	ચંદ્રકાંત બક્ષી	
+ખભે કોથળો ને દેશ મોકળો	રશ્મિ બંસલ (અનુવાદ: સોનલ મોદી)
+ઈગો	ચંદ્રકાંત બક્ષી	
+કોસ્મોસ	નગેન્દ્ર વિજય	યુરેનસ બુક્સ
 
 English
--------
+----------
 
 MADE IN JAPAN	Akio Morita	
 To Kill A Mockingbird	Harper Lee	
 Roots and Wings	Raksha Bharadia	Rupa
-The Dilbert Principle	Scott Adams
-The Hobbit	J.R.R. Talkien
-iWoz	Steve Wozniak
+The Dilbert Principle	Scott Adams	
+The Hobbit	J.R.R. Talkien	
+iWoz	Steve Wozniak	
 
 Computer+Science
-----------------
+----------------------------
 
 Open sources 2.0
 The Art of UNIX Programming
@@ -34,3 +34,4 @@ The Debian System	Martin F. Krafft	Open Source Press
 Head First Physics	Lang			O'Reilly
 Head First Programming	Barry & Griggiths	O'Reilly
 Stealing the Network: How to Own the Box	Syngress
+
