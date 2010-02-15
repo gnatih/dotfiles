@@ -8,6 +8,9 @@ checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/planet-debian
 [development/debian/d-i/po]
 checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/d-i/trunk/packages/po
 
+[development/debian/d-i/tasksel]
+checkout = git clone 'git+ssh://kartikm-guest@git.debian.org/git/tasksel/tasksel.git' 'tasksel'
+
 [development/debian/release-notes]
 checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/ddp/manuals/trunk/release-notes
 
