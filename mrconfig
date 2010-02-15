@@ -1,0 +1,72 @@
+#debian
+[development/debian/debian-in]
+checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/debian-in/
+
+[development/debian/planet-debian]
+checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/planet-debian
+
+[development/debian/d-i/po]
+checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/d-i/trunk/packages/po
+
+[development/debian/release-notes]
+checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/ddp/manuals/trunk/release-notes
+
+[development/debian/NM/nm]
+checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/nm
+
+#upstreams
+[development/upstreams/ayttm]
+checkout = git clone ssh://kartik_m@ayttm.git.sourceforge.net/gitroot/ayttm/ayttm
+
+[development/upstreams/aspell-gu]
+checkout = svn co https://kartik_m@aspell-gu.svn.sourceforge.net/svnroot/aspell-gu
+
+[development/upstreams/bup/bup]
+checkout = git clone git://github.com/apenwarr/bup.git
+
+[development/upstreams/CHMLib]
+checkout = git clone git://github.com/jedwing/CHMLib.git
+
+[development/upstreams/fontypython/SVN/trunk]
+checkout = svn co svn://svn.savannah.nongnu.org/fontypython/trunk
+
+[development/upstreams/yokadi]
+checkout = git clone git://github.com/agateau/yokadi
+
+#packages
+[development/debian/packages/festival/VCS/festival]
+checkout = git clone git+ssh://kartikm-guest@git.debian.org/git/collab-maint/festival.git
+
+[development/debian/packages/speech-tools/VCS/speech-tools]
+checkout = git clone git+ssh://kartikm-guest@git.debian.org/git/collab-maint/speech-tools.git
+
+[development/debian/packages/aria2/VCS/aria2]
+checkout = svn co https://kartik@svn.origo.ethz.ch/tario-debian-package
+
+[development/debian/packages/nginx/svn/nginx]
+checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/collab-maint/deb-maint/nginx
+
+[development/debian/packages/desktopcouch/desktopcouch]
+checkout = git clone git+ssh://kartikm-guest@git.debian.org/git/collab-maint/desktopcouch.git
+
+[development/debian/packages/fortunes-debian-hints/git/fortunes-debian-hints]
+checkout = git clone git+ssh://kartik@git.debian.org/git/collab-maint/fortunes-debian-hints.git
+
+#l10n
+[development/l10n/KDE/l10n-kde4/gu]
+checkout = svn co svn+ssh://kartik@svn.kde.org/home/kde/trunk/l10n-kde4/gu
+
+[development/l10n/KDE/l10n-kde4/templates]
+checkout = svn co svn+ssh://kartik@svn.kde.org/home/kde/trunk/l10n-kde4/templates
+
+[development/l10n/tuxfamily/tuxpaint]
+CVS_ROOT= :ext:kartik_m@tuxpaint.cvs.sourceforge.net:/cvsroot/tuxpaint
+checkout = cvs co tuxpaint
+
+[development/l10n/tuxfamily/tuxpaint-stamps]
+CVS_ROOT= :ext:kartik_m@tuxpaint.cvs.sourceforge.net:/cvsroot/tuxpaint
+checkout = cvs co tuxpaint-stamps
+
+#misc
+[wiki]
+checkout = git clone git://home/kartik/wiki.git
