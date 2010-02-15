@@ -13,3 +13,9 @@ Please send your patch(es) to them!
 * vimrc (~/.vimrc)
 * xorg.conf.home (/etc/X11/xorg.conf)
 * xorg.conf.work (/etc/X11/xorg.conf)
+
+This is not dotfiles but I found that having separate software for books and
+movies collection is bad idea so, here it is!
+
+* books.txt
+* movies.txt
