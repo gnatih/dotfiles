@@ -3,54 +3,54 @@ Book	Author(s)	Publisher
 Gujarati
 -----------
 
-કહેવત વિશ્વ	ચંદ્રકાંત બક્ષી
-સ્માઈલ પ્લિઝ
-કીમિયાગર - પોલો કોયેલો (અનુવાદ: અવનીશ ભટ્ટ)
-કોસ્મોસ	નગેન્દ્ર વિજય	યુરેનસ બુક્સ
-ખભે કોથળો ને દેશ મોકળો	રશ્મિ બંસલ (અનુવાદ: સોનલ મોદી)
-ગુલેસ્તાન-એ-સાઅદી	બી. એન. દસ્તૂર
-ભોજનનો આનંદ	અંજલિ મંગળદાસ	
-લીલી નસોમાં પાનખર	ચંદ્રકાંત બક્ષી	
-બ્લેક લેબલ	અશોક દવે	
-પ્રિય નીકી..., 	ચંદ્રકાંત બક્ષી	
-વાચનયાત્રાનો પ્રસાદ	સંપાદક: મહેન્દ્ર મેઘાણી
-આકાર	ચંદ્રકાંત બક્ષી	
-ઓળખ પરેડ	અશોક દવે	
-ઈગો	ચંદ્રકાંત બક્ષી	
-શ્વાસની એકલતા	ચંદ્રકાંત બક્ષી	
-સઆદત હસન મન્ટો: કેટલીક વાર્તાઓ	અનુવાદ: શરીફા વીજળીવાળા
-સળગતાં સૂરજમુખી	અરવિન્ગ સ્ટોન
-તોત્તો-ચાન	તેત્સુકો કુરોયાનાગી
-તમે અને તમારું નીરોગી બાળક	ડો. રઈશ મનીઆર
+1. કહેવત વિશ્વ	ચંદ્રકાંત બક્ષી
+2. સ્માઈલ પ્લિઝ
+3. કીમિયાગર - પોલો કોયેલો (અનુવાદ: અવનીશ ભટ્ટ)
+4. કોસ્મોસ	નગેન્દ્ર વિજય	યુરેનસ બુક્સ
+5. ખભે કોથળો ને દેશ મોકળો	રશ્મિ બંસલ (અનુવાદ: સોનલ મોદી)
+6. ગુલેસ્તાન-એ-સાઅદી	બી. એન. દસ્તૂર
+7. ભોજનનો આનંદ	અંજલિ મંગળદાસ	
+8. લીલી નસોમાં પાનખર	ચંદ્રકાંત બક્ષી	
+9. બ્લેક લેબલ	અશોક દવે	
+10. પ્રિય નીકી..., 	ચંદ્રકાંત બક્ષી	
+11. વાચનયાત્રાનો પ્રસાદ	સંપાદક: મહેન્દ્ર મેઘાણી
+12. આકાર	ચંદ્રકાંત બક્ષી	
+13. ઓળખ પરેડ	અશોક દવે	
+14. ઈગો	ચંદ્રકાંત બક્ષી	
+15. શ્વાસની એકલતા	ચંદ્રકાંત બક્ષી	
+16. સઆદત હસન મન્ટો: કેટલીક વાર્તાઓ	અનુવાદ: શરીફા વીજળીવાળા
+17. સળગતાં સૂરજમુખી	અરવિન્ગ સ્ટોન
+18. તોત્તો-ચાન	તેત્સુકો કુરોયાનાગી
+19. તમે અને તમારું નીરોગી બાળક	ડો. રઈશ મનીઆર
 
 English
 ----------
 
-iWoz	Steve Wozniak	
-Fermat's Last Theorem	Simon Singh
-Frekonomics	Steven D. Levutt & Stepuen J. Dubner
-MADE IN JAPAN	Akio Morita	
-Roots and Wings	Raksha Bharadia	Rupa
-Stay Hungry Stay Foolish - Rashmi Bansal	
-The Dilbert Principle	Scott Adams	
-The Hobbit	J.R.R. Talkien	
-To Kill A Mockingbird	Harper Lee	
-Woe Is I	Patticia T. O'Conner
+1. iWoz	Steve Wozniak	
+2. Fermat's Last Theorem	Simon Singh
+3. Frekonomics	Steven D. Levutt & Stepuen J. Dubner
+4. MADE IN JAPAN	Akio Morita	
+5. Roots and Wings	Raksha Bharadia	Rupa
+6. Stay Hungry Stay Foolish - Rashmi Bansal	
+7. The Dilbert Principle	Scott Adams	
+8. The Hobbit	J.R.R. Talkien	
+9. To Kill A Mockingbird	Harper Lee	
+10. Woe Is I	Patticia T. O'Conner
 
 Computer+Science
 ----------------------------
 
-97 Things every software architect should know	Richard Monson-Haefel
-Google Maps Hacks	Gibson & Erle	O'Reilly
-Head First Physics	Lang	O'Reilly
-Head First Programming	Barry & Griggiths	O'Reilly
-Learning Perl	Schwartz, Phonenix & foy	O'Reilly
-Open sources 2.0
-Perl Best Practices	Conway	O'Reilly
-Practical Unix & Internet Security	Garfinkel, Spafford & Schwartz
-sed & awk: Pocket Reference	Arnold Robbins	O'Reilly
-Stealing the Network: How to Own the Box	Syngress
-The Art of Community	Bacon	O'Reilly
-The Art of UNIX Programming	O'Reilly
-The Debian System	Martin F. Krafft	Open Source Press
+1. 97 Things every software architect should know	Richard Monson-Haefel
+2. Google Maps Hacks	Gibson & Erle	O'Reilly
+3. Head First Physics	Lang	O'Reilly
+4. Head First Programming	Barry & Griggiths	O'Reilly
+5. Learning Perl	Schwartz, Phonenix & foy	O'Reilly
+6. Open sources 2.0
+7. Perl Best Practices	Conway	O'Reilly
+8. Practical Unix & Internet Security	Garfinkel, Spafford & Schwartz
+9. sed & awk: Pocket Reference	Arnold Robbins	O'Reilly
+10. Stealing the Network: How to Own the Box	Syngress
+11. The Art of Community	Bacon	O'Reilly
+12. The Art of UNIX Programming	O'Reilly
+13. The Debian System	Martin F. Krafft	Open Source Press
 
