@@ -7,6 +7,7 @@ repository. There is no plan to put my password/login details ;)
 Please send your patch(es) to them!
 
 * bashrc (~/.bashrc)
+* mrconfig (~/.mrconfig)
 * quiltrc (~/.quiltrc)
 * sources.list.home (/etc/apt/sources.list)
 * sources.list.work (/etc/apt/sources.list)
