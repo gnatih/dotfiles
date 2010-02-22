@@ -4,7 +4,7 @@ README
 This is my repository of dotfiles. Currently, I have following files in
 repository. There is no plan to put my password/login details ;)
 
-Please send your patch(es) to them!
+Please send your patch(es)!
 
 * bashrc (~/.bashrc)
 * mrconfig (~/.mrconfig)
@@ -14,9 +14,10 @@ Please send your patch(es) to them!
 * vimrc (~/.vimrc)
 * xorg.conf.home (/etc/X11/xorg.conf)
 * xorg.conf.work (/etc/X11/xorg.conf)
+* zshrc (~/.zshrc)
 
-This is not dotfiles but I found that having separate software for books and
-movies collection is bad idea so, here it is!
+These are not 'real' dotfiles but I found that dealing with separate software
+for books and movies collection can be pain. So, here we go,
 
 * books.txt
 * movies.txt
