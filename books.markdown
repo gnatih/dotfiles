@@ -1,0 +1,57 @@
+Books
+=====
+
+Gujarati
+--------
+
++ કહેવત વિશ્વ	ચંદ્રકાંત બક્ષી
++ સ્માઈલ પ્લિઝ
++ કીમિયાગર - પોલો કોયેલો (અનુવાદ: અવનીશ ભટ્ટ)
++ કોસ્મોસ	નગેન્દ્ર વિજય	યુરેનસ બુક્સ
++ ખભે કોથળો ને દેશ મોકળો	રશ્મિ બંસલ (અનુવાદ: સોનલ મોદી)
++ ગુલેસ્તાન-એ-સાઅદી	બી. એન. દસ્તૂર
++ ભોજનનો આનંદ	અંજલિ મંગળદાસ	
++ લીલી નસોમાં પાનખર	ચંદ્રકાંત બક્ષી	
++ બ્લેક લેબલ	અશોક દવે	
++ પ્રિય નીકી..., 	ચંદ્રકાંત બક્ષી	
++ વાચનયાત્રાનો પ્રસાદ	સંપાદક: મહેન્દ્ર મેઘાણી
++ આકાર	ચંદ્રકાંત બક્ષી	
++ ઓળખ પરેડ	અશોક દવે	
++ ઈગો	ચંદ્રકાંત બક્ષી	
++ શ્વાસની એકલતા	ચંદ્રકાંત બક્ષી	
++ સઆદત હસન મન્ટો: કેટલીક વાર્તાઓ	અનુવાદ: શરીફા વીજળીવાળા
++ સળગતાં સૂરજમુખી	અરવિન્ગ સ્ટોન
++ તોત્તો-ચાન	તેત્સુકો કુરોયાનાગી
++ તમે અને તમારું નીરોગી બાળક	ડો. રઈશ મનીઆર
+
+English
+-------
+
++ iWoz	Steve Wozniak	
++ Fermat's Last Theorem	Simon Singh
++ Frekonomics	Steven D. Levutt & Stepuen J. Dubner
++ MADE IN JAPAN	Akio Morita	
++ Roots and Wings	Raksha Bharadia	Rupa
++ Stay Hungry Stay Foolish - Rashmi Bansal	
++ The Dilbert Principle	Scott Adams	
++ The Hobbit	J.R.R. Talkien	
++ To Kill A Mockingbird	Harper Lee	
++ Woe Is I	Patticia T. O'Conner
+
+Computer+Science
+----------------
+
++ 97 Things every software architect should know	Richard Monson-Haefel
++ Google Maps Hacks	Gibson & Erle	O'Reilly
++ Head First Physics	Lang	O'Reilly
++ Head First Programming	Barry & Griggiths	O'Reilly
++ Learning Perl	Schwartz, Phonenix & foy	O'Reilly
++ Open sources 2.0
++ Perl Best Practices	Conway	O'Reilly
++ Practical Unix & Internet Security	Garfinkel, Spafford & Schwartz
++ sed & awk: Pocket Reference	Arnold Robbins	O'Reilly
++ Stealing the Network: How to Own the Box	Syngress
++ The Art of Community	Bacon	O'Reilly
++ The Art of UNIX Programming	O'Reilly
++ The Debian System	Martin F. Krafft	Open Source Press
++ Beautiful Data
