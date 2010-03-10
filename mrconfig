@@ -85,3 +85,6 @@ checkout = git clone 'git@github.com:xkartik/talks.git' 'talks'
 
 [development/resume]
 checkout = git clone 'git@github.com:xkartik/resume.git' 'resume'
+
+[development/awesome-config]
+checkout = git clone 'git://gitorious.org/awesome-config/awesome-config.git' 'awesome-config'
