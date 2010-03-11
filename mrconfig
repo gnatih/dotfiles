@@ -55,6 +55,9 @@ checkout = git clone git+ssh://kartikm-guest@git.debian.org/git/collab-maint/des
 [development/debian/packages/fortunes-debian-hints/git/fortunes-debian-hints]
 checkout = git clone git+ssh://kartik@git.debian.org/git/collab-maint/fortunes-debian-hints.git
 
+[development/debian/packages/xosview/git/xosview]
+checkout = git clone 'ssh://kartik@git.debian.org/git/collab-maint/xosview.git' 'xosview'
+
 #l10n
 [development/l10n/KDE/l10n-kde4/gu]
 checkout = svn co svn+ssh://kartik@svn.kde.org/home/kde/trunk/l10n-kde4/gu
@@ -74,13 +77,13 @@ checkout = cvs co tuxpaint-stamps
 [wiki]
 checkout = git clone git://home/kartik/wiki.git
 
-[development/dotfiles]
+[development/github/dotfiles]
 checkout = git clone 'git@github.com:xkartik/dotfiles.git' 'dotfiles'
 
-[development/talks]
+[development/github/talks]
 checkout = git clone 'git@github.com:xkartik/talks.git' 'talks'
 
-[development/resume]
+[development/github/resume]
 checkout = git clone 'git@github.com:xkartik/resume.git' 'resume'
 
 [development/awesome-config]
