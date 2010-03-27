@@ -131,7 +131,7 @@ alias mkdir='nocorrect mkdir'	# no spelling correction on mkdir
 alias vi='vim'			# Vi IMproved
 alias rm='nocorrect rm -i'	# interactive RM
 alias l="ls -GlAh --color"
-alias ls="ls -Gh --color"
+alias ls="ls --color=auto -Fh --group-directories-first"
 alias clls="clear;ls -Glah --color"
 alias ping='ping -c 4 '
 alias pingg='ping -c 4 www.google.com'
@@ -141,7 +141,7 @@ alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 
 alias diff='colordiff'
-alias vless='/usr/share/vim/vim71/macros/less.sh' #Depends on your vim version!
+alias vless='/usr/share/vim/vim72/macros/less.sh' #Depends on your vim version!
 
 #from Joey :)
 alias stardate='date "+%y%m.%d/%H%M"'
