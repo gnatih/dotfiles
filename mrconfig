@@ -73,6 +73,10 @@ checkout = cvs co tuxpaint
 CVS_ROOT= :ext:kartik_m@tuxpaint.cvs.sourceforge.net:/cvsroot/tuxpaint
 checkout = cvs co tuxpaint-stamps
 
+#nexenta
+[development/nexenta/installation-report]
+checkout = hg clone 'http://hg.nexenta.org/installation-report' 'installation-report'
+
 #misc
 [wiki]
 checkout = git clone git://home/kartik/wiki.git
