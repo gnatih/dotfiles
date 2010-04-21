@@ -29,6 +29,7 @@ set nu
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 hi LineTooLong cterm=bold ctermbg=red guibg=LightYellow
+match DiffAdd '\%>80v.*'
 
 " from lool vimrc
 set autoindent
@@ -36,7 +37,7 @@ set nobackup
 set ruler
 
 " from Perl Best Practices
-set textwidth=78
+set textwidth=80
 set shiftwidth=4
 
 " set list mode and appropriate chars to display tabs, end of lines,
