@@ -13,8 +13,8 @@ promptinit
 
 # History settings
 HISTFILE=~/.zshistory
-SAVEHIST=3000
-HISTSIZE=3000
+SAVEHIST=9000
+HISTSIZE=9000
 DIRSTACKSIZE=30
 
 # ZSH Options
@@ -135,19 +135,27 @@ alias ls="ls --color=auto -Fh --group-directories-first"
 alias clls="clear;ls -Glah --color"
 alias ping='ping -c 4 '
 alias pingg='ping -c 4 www.google.com'
-alias git-sh='nocorrect ~/bin/git-sh'
+alias ff='iceweasel'
 
+#debian packaging
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
+alias declean='sudo apt-get remove `deborphan`'
+alias pcopy='cp /var/cache/pbuilder/result/$1 .'
+export DEBEMAIL="kartik@debian.org"
+export DEBFULLNAME="Kartik Mistry"
+
+#svn buildpackage (from trunk!)
+alias svn-b='svn-buildpackage --svn-builder="pdebuild --buildresult `pwd`/../build-area" --svn-ignore'
+alias svn-br='svn-b --svn-dont-purge --svn-reuse'
+alias  svn-bt='svn-buildpackage --svn-tag-only'
 
 alias diff='colordiff'
+alias tail='colortail'
 alias vless='/usr/share/vim/vim72/macros/less.sh' #Depends on your vim version!
 
 #from Joey :)
 alias stardate='date "+%y%m.%d/%H%M"'
-
-#debmail
-export DEBEMAIL=kartik@debian.org
 
 # fortunes-debian-hints
 if [ -x /usr/games/fortune ]; then
