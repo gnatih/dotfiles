@@ -15,9 +15,3 @@ Please send your patch(es)!
 * xorg.conf.home (/etc/X11/xorg.conf)
 * xorg.conf.work (/etc/X11/xorg.conf)
 * zshrc (~/.zshrc)
-
-These are not 'real' dotfiles but I found that dealing with separate software
-for books and movies collection can be pain. So, here we go,
-
-* books.txt
-* movies.txt
