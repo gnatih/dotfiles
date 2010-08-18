@@ -18,7 +18,7 @@ checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/ddp/manuals/trunk/r
 checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/nm
 
 [development/debian/in2010.mini]
-checkout = svn co 'svn://kartik@svn.debian.org/debconf-data/in2010.mini' 'in2010.mini'
+checkout = svn co svn+ssh://kartik@svn.debian.org/svn/debconf-data/in2010.mini
 
 #upstreams
 [development/upstreams/ayttm]
