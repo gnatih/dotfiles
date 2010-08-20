@@ -79,9 +79,6 @@ alias rm='rm -i'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 
-#this is hack for my wifi
-alias renet='sudo /etc/init.d/networking restart'
-
 alias diff='colordiff'
 alias vless='/usr/share/vim/vim72/macros/less.sh'
 
