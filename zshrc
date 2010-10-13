@@ -148,10 +148,9 @@ export DEBFULLNAME="Kartik Mistry"
 #svn buildpackage (from trunk!)
 alias svn-b='svn-buildpackage --svn-builder="pdebuild --buildresult `pwd`/../build-area" --svn-ignore'
 alias svn-br='svn-b --svn-dont-purge --svn-reuse'
-alias  svn-bt='svn-buildpackage --svn-tag-only'
+alias svn-bt='svn-buildpackage --svn-tag-only'
 
 alias diff='colordiff'
-alias tail='colortail'
 alias vless='/usr/share/vim/vim72/macros/less.sh' #Depends on your vim version!
 
 #from Joey :)
@@ -170,6 +169,17 @@ fi
 
 # Utility functions
 
+# license check foo
+# By: Kartik Mistry
+lcheck()
+{
+	licensecheck -r . --copyright > ../license-report.txt
+	echo "---------------------------------------" >> ../license-report.txt
+	echo "We've found probably some more things.." >> ../license-report.txt
+	echo "---------------------------------------" >> ../license-report.txt
+	grep -irn "License" * >> ../license-report.txt
+}
+
 pskill()
 {
 	kill -9 $(ps -aux | grep $1 | grep -v grep | awk '{ print $1 }')
@@ -187,8 +197,8 @@ case $TERM in
 	;;
 esac
 
-# wget like progress bar for cp.
-# http://chris-lamb.co.uk/2008/01/24/can-you-get-cp-to-give-a-progress-bar-like-wget/
+# wget like progress bar for cp
+# source: http://chris-lamb.co.uk/2008/01/24/can-you-get-cp-to-give-a-progress-bar-like-wget/
 cp_p()
 {
    strace -q -ewrite cp -- "${1}" "${2}" 2>&1 \
@@ -206,6 +216,28 @@ cp_p()
             }
          }
          END { print "" }' total_size=$(stat -c '%s' "${1}") count=0
+}
+
+# only upgrade installed packages
+# source: http://www.df7cb.de/blog/2010/Upgrading_only_installed_packages.html
+safe_upgrade () {
+	if [ "$*" ] ; then
+		set -- $(dpkg -l "$@" | grep ^ii | awk '{ print $2 }')
+		if [ "$*" ] ; then
+			echo "apt-get install $@"
+			sudo apt-get install "$@"
+		else
+			echo "Nothing to upgrade"
+		fi
+	else
+		sudo apt-get upgrade
+	fi
+}
+
+# cd+ls
+# source: http://lifehacker.com/5662424/change-directories-and-view-files-in-one-custom-command
+cdl {
+    cd $1; ls;
 }
 
 # Misc.
