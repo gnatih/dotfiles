@@ -236,8 +236,8 @@ safe_upgrade () {
 
 # cd+ls
 # source: http://lifehacker.com/5662424/change-directories-and-view-files-in-one-custom-command
-cdl {
-    cd $1; ls;
+cdl () {
+	cd $1; ls;
 }
 
 # Misc.
