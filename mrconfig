@@ -127,9 +127,3 @@ checkout = git clone 'git://github.com/progit/progit.git' 'progit'
 
 [development/misc/hgbook]
 checkout = hg clone 'http://bitbucket.org/bos/hgbook' 'hgbook'
-
-[development/illumos-gate]
-checkout = hg clone 'ssh://anonhg@hg.illumos.org/illumos-gate' 'illumos-gate'
-
-[development/nexenta/autobuilder]
-checkout = hg clone 'http://hg.nexenta.org/autobuilder' 'autobuilder'
