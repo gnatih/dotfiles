@@ -42,6 +42,9 @@ checkout = git clone git://github.com/agateau/yokadi
 [development/upstreams/mango-lassi]
 checkout = git clone 'git://github.com/herzi/mango-lassi.git' 'mango-lassi'
 
+[development/upstreams/openFrameworks]
+checkout = git clone 'git://github.com/openframeworks/openFrameworks.git' 'openFrameworks'
+
 #packages
 [development/debian/packages/festival/VCS/festival]
 checkout = git clone git+ssh://kartik@git.debian.org/git/collab-maint/festival.git
@@ -83,6 +86,12 @@ checkout = hg clone 'http://hg.nexenta.org/installation-report' 'installation-re
 [development/nexenta/ips-deb]
 checkout = hg clone 'http://hg.nexenta.org/ips-deb' 'ips-deb'
 
+[development/illumos-gate]
+checkout = hg clone 'ssh://anonhg@hg.illumos.org/illumos-gate' 'illumos-gate'
+
+[development/nexenta/autobuilder]
+checkout = hg clone 'http://hg.nexenta.org/autobuilder' 'autobuilder'
+
 #misc
 [wiki]
 checkout = git clone git://home/kartik/wiki.git
@@ -106,9 +115,21 @@ checkout = git clone 'http://git.sysphere.org/dotfiles' 'dotfiles'
 [development/configs/.dotfiles]
 checkout = git clone 'http://github.com/JackH79/.dotfiles.git' '.dotfiles'
 
+[development/configs/oh-my-zsh]
+checkout = git clone 'http://github.com/robbyrussell/oh-my-zsh.git' 'oh-my-zsh'
+
 #books
 [development/misc/svnbook/trunk]
 checkout = svn co 'http://svnbook.googlecode.com/svn/trunk' 'trunk'
 
 [development/misc/progit]
 checkout = git clone 'git://github.com/progit/progit.git' 'progit'
+
+[development/misc/hgbook]
+checkout = hg clone 'http://bitbucket.org/bos/hgbook' 'hgbook'
+
+[development/illumos-gate]
+checkout = hg clone 'ssh://anonhg@hg.illumos.org/illumos-gate' 'illumos-gate'
+
+[development/nexenta/autobuilder]
+checkout = hg clone 'http://hg.nexenta.org/autobuilder' 'autobuilder'
