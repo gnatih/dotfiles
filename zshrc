@@ -132,16 +132,30 @@ alias vi='vim'			# Vi IMproved
 alias rm='nocorrect rm -i'	# interactive RM
 alias l="ls -GlAh --color"
 alias ls="ls --color=auto -Fh --group-directories-first"
+alias latest="ls -lct1"
+alias ltree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
 alias clls="clear;ls -Glah --color"
 alias ping='ping -c 4 '
 alias pingg='ping -c 4 www.google.com'
 alias ff='iceweasel'
+alias psprunge="curl -s -F 'sprunge=<-' http://sprunge.us | xclip -i -selection clipboard"
+alias grep='grep --colour=auto'
+alias diff='colordiff'
+alias vless='/usr/share/vim/vim73/macros/less.sh' #Depends on your vim version!
+alias cd..='cd ..'
+alias .='pwd'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias cl='clear'
+alias sl=ls
+
 
 #debian packaging
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 alias declean='sudo apt-get remove `deborphan`'
 alias pcopy='cp /var/cache/pbuilder/result/$1 .'
+alias lintian='lintian -iIEvm --pedantic -o --color auto'
 export DEBEMAIL="kartik@debian.org"
 export DEBFULLNAME="Kartik Mistry"
 
@@ -149,9 +163,6 @@ export DEBFULLNAME="Kartik Mistry"
 alias svn-b='svn-buildpackage --svn-builder="pdebuild --buildresult `pwd`/../build-area" --svn-ignore'
 alias svn-br='svn-b --svn-dont-purge --svn-reuse'
 alias svn-bt='svn-buildpackage --svn-tag-only'
-
-alias diff='colordiff'
-alias vless='/usr/share/vim/vim72/macros/less.sh' #Depends on your vim version!
 
 #from Joey :)
 alias stardate='date "+%y%m.%d/%H%M"'
@@ -171,37 +182,21 @@ fi
 
 # license check foo
 # By: Kartik Mistry
-lcheck()
-{
-	licensecheck -r . --copyright > ../license-report.txt
-	echo "---------------------------------------" >> ../license-report.txt
-	echo "We've found probably some more things.." >> ../license-report.txt
-	echo "---------------------------------------" >> ../license-report.txt
-	grep -irn "License" * >> ../license-report.txt
+lcheck() {
+ licensecheck -r --copyright > ../license-report.txt
+ echo "----------------------------------------------" >> ../license-report.txt
+ echo "And, We've probably found some more things...." >> ../license-report.txt
+ echo "----------------------------------------------" >> ../license-report.txt
+ grep -irn "License" * >> ../license-report.txt
 }
 
-pskill()
-{
-	kill -9 $(ps -aux | grep $1 | grep -v grep | awk '{ print $1 }')
-	echo -n "Killed $1 process..."
-}
-
-case $TERM in
-	xterm*|rxvt|(K|a)term)
-	precmd () {
-		print -Pn "\033]0;%n@%m%#  %~ %l  %w :: %T\a" 
-	}
-	preexec () {
-		print -Pn "\033]0;%n@%m%#  <$1>  %~ %l  %w :: %T\a" 
-	}
-	;;
-esac
+#histroy
+h() { if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi; }
 
 # wget like progress bar for cp
 # source: http://chris-lamb.co.uk/2008/01/24/can-you-get-cp-to-give-a-progress-bar-like-wget/
-cp_p()
-{
-   strace -q -ewrite cp -- "${1}" "${2}" 2>&1 \
+cp_p() {
+strace -q -ewrite cp -- "${1}" "${2}" 2>&1 \
       | awk '{
         count += $NF
             if (count % 10 == 0) {
@@ -237,12 +232,12 @@ safe_upgrade () {
 # cd+ls
 # source: http://lifehacker.com/5662424/change-directories-and-view-files-in-one-custom-command
 cdl () {
-	cd $1; ls;
+ cd $1; ls;
 }
 
 # Misc.
-#source ~/.aliases
-#source ~/.exports
+source ~/.oh-my-zsh/plugins/deb/deb.plugin.zsh
+source ~/.oh-my-zsh/plugins/debian/debian.plugin.zsh
 
 umask 022
 

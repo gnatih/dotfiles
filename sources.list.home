@@ -1,13 +1,15 @@
-# sid
-deb http://ftp.de.debian.org/debian/ sid main contrib non-free
-deb-src http://ftp.de.debian.org/debian/ sid main contrib non-free
+#sid
+deb http://cdn.debian.net/debian/ sid main contrib non-free
+#deb http://ftp.de.debian.org/debian/ sid main contrib non-free
+#deb-src http://ftp.de.debian.org/debian/ sid main contrib non-free
+deb-src http://cdn.debian.net/debian/ sid main contrib non-free
 
-# experimental
+#experimental
 deb http://ftp.de.debian.org/debian/ experimental main contrib non-free
 deb-src http://ftp.de.debian.org/debian/ experimental main contrib non-free
 
-#debian-multimedia
-deb ftp://ftp.debian-multimedia.org sid main
+#mozilla
+deb http://mozilla.debian.net/ experimental iceweasel-4.0
 
-#emacs
-deb http://emacs.orebokech.com sid main
+#emacs-naquadah
+deb http://emacs.naquadah.org/ unstable/
