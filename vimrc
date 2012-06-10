@@ -8,9 +8,6 @@ syntax on
 "          Switch it off if you prefer real vi compatibility
 set nocompatible
 
-" show matching brackets
-set showmatch
-
 " display mode INSERT/REPLACE/...
 set showmode
 
@@ -22,13 +19,14 @@ set esckeys
 set laststatus=2
 set statusline=
 set statusline+=%-3.3n\ " buffer number
-set statusline+=%f\ " filename
+set statusline+=%F\ " filename
 set statusline+=%h%m%r%w " status flags
 set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type
 set statusline+=%= " right align remainder
 set statusline+=0x%-8B " character value
 set statusline+=%-14(%l,%c%V%) " line, character
 set statusline+=%<%P " file position
+" set laststatus=2 set statusline=%F\ [%Y,\ %{&ff}]\ %=\ %l:%c\ (%p%%)\ \|\ %{strftime(\"%Y-%m-%d,\ %H:%M\")}
 
 " Disable the F1 help key
 map <F1> <Esc>
@@ -53,9 +51,6 @@ set backspace=indent,eol,start
 " enable this for bash compatible behaviour
 set wildmode=longest,full
 
-" Set line no
-set nu
-
 " Daniel whitespace marker
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
@@ -63,9 +58,7 @@ highlight LineTooLong cterm=bold ctermbg=red guibg=LightYellow
 match DiffAdd '\%>80v.*'
 
 " from lool's vimrc
-set autoindent
 set nobackup
-set ruler
 
 " from Perl Best Practices
 set shiftwidth=4
@@ -83,8 +76,19 @@ set listchars=tab:>-,trail:.,extends:>,precedes:<
 " that it potentially can open for malicious users to do harmful things.
 set modelines=0
 
+" Prevent accidental editing of patch .orig files
+autocmd BufRead *.orig set readonly
+
+" UI
+set nu               " Line number
+set ruler            " Ruler
+set cursorcolumn     " Show current column
+set nostartofline    " Leave my cursor where it was
 set incsearch
+set autoindent
 set smartindent
+set showmatch        " Show matching bracket
+set hls              " Hightlight search
 
 " Color
 colorscheme desert

@@ -1,31 +1,28 @@
 #debian
-[development/debian/debian-in]
-checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/debian-in/
+[/home/kartik/development/debian/debian-in-git]
+checkout = git clone 'git+ssh://kartik@git.debian.org/git/debian-in/debian-in.git' 'debian-in-git'
 
 [development/debian/planet-debian]
-checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/planet-debian
+checkout = svn co svn+ssh://kartik@svn.debian.org/svn/planet-debian
 
-[development/debian/d-i/po]
-checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/d-i/trunk/packages/po
+[development/debian/d-i/level1/po]
+checkout = svn co svn+ssh://kartik@svn.debian.org/svn/d-i/trunk/packages/po
 
-[development/debian/d-i/tasksel]
-checkout = git clone 'git+ssh://kartikm-guest@git.debian.org/git/tasksel/tasksel.git' 'tasksel'
+[development/debian/d-i/level2/tasksel]
+checkout = git clone 'git+ssh://kartik@git.debian.org/git/tasksel/tasksel.git' 'tasksel'
 
 [development/debian/release-notes]
-checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/ddp/manuals/trunk/release-notes
+checkout = svn co svn+ssh://kartik@svn.debian.org/svn/ddp/manuals/trunk/release-notes
 
 [development/debian/NM/nm]
-checkout = svn co svn+ssh://kartikm-guest@svn.debian.org/svn/nm
+checkout = svn co svn+ssh://kartikm@svn.debian.org/svn/nm
 
-[development/debian/in2010.mini]
-checkout = svn co svn+ssh://kartik@svn.debian.org/svn/debconf-data/in2010.mini
+[development/debian/in2011.mini]
+checkout = svn co svn+ssh://kartik@svn.debian.org/svn/debconf-data/in2011.mini
 
 #upstreams
 [development/upstreams/ayttm]
 checkout = git clone ssh://kartik_m@ayttm.git.sourceforge.net/gitroot/ayttm/ayttm
-
-[development/upstreams/aspell-gu]
-checkout = svn co https://kartik_m@aspell-gu.svn.sourceforge.net/svnroot/aspell-gu
 
 [development/upstreams/bup/bup]
 checkout = git clone git://github.com/apenwarr/bup.git
@@ -42,24 +39,21 @@ checkout = git clone git://github.com/agateau/yokadi
 [development/upstreams/mango-lassi]
 checkout = git clone 'git://github.com/herzi/mango-lassi.git' 'mango-lassi'
 
+[development/upstreams/xosview]
+checkout = git clone 'git@github.com:hills/xosview.git' 'xosview'
+
 #packages
-[development/debian/packages/festival/VCS/festival]
-checkout = git clone git+ssh://kartik@git.debian.org/git/collab-maint/festival.git
-
-[development/debian/packages/speech-tools/VCS/speech-tools]
-checkout = git clone git+ssh://kartik@git.debian.org/git/collab-maint/speech-tools.git
-
-[development/debian/packages/aria2/VCS/aria2]
-checkout = svn co https://kartik@svn.origo.ethz.ch/tario-debian-package
-
-[development/debian/packages/nginx/svn/nginx]
-checkout = svn co 'svn+ssh://kartik@svn.debian.org/svn/collab-maint/deb-maint/nginx' 'nginx'
-
-[development/debian/packages/desktopcouch/desktopcouch]
-checkout = git clone git+ssh://kartik@git.debian.org/git/collab-maint/desktopcouch.git
+[development/debian/packages/aria2/aria2]
+checkout = git clone 'git+ssh://kartik@git.debian.org/git/collab-maint/aria2.git' 'aria2'
 
 [development/debian/packages/fortunes-debian-hints/git/fortunes-debian-hints]
 checkout = git clone git+ssh://kartik@git.debian.org/git/collab-maint/fortunes-debian-hints.git
+
+[development/debian/packages/falconpl/falcon]
+checkout = git clone 'git+ssh://git.debian.org/git/collab-maint/falconpl.git' 'falcon'
+
+[development/debian/packages/nginx/git/nginx]
+checkout = git clone 'git+ssh://kartik@git.debian.org/git/collab-maint/nginx.git' 'nginx'
 
 #l10n
 [development/l10n/KDE/l10n-kde4/gu]
@@ -76,36 +70,18 @@ checkout = cvs -d ':ext:kartik_m@tuxpaint.cvs.sourceforge.net:/cvsroot/tuxpaint'
 CVS_ROOT = :ext:kartik_m@tuxpaint.cvs.sourceforge.net:/cvsroot/tuxpaint
 checkout = cvs -d ':ext:kartik_m@tuxpaint.cvs.sourceforge.net:/cvsroot/tuxpaint' co -d 'tuxpaint-stamps' 'tuxpaint-stamps'
 
-#nexenta
-[development/nexenta/installation-report]
-checkout = hg clone 'http://hg.nexenta.org/installation-report' 'installation-report'
-
-[development/nexenta/ips-deb]
-checkout = hg clone 'http://hg.nexenta.org/ips-deb' 'ips-deb'
-
+#nexenta/illumos
 [development/illumos-gate]
 checkout = hg clone 'ssh://anonhg@hg.illumos.org/illumos-gate' 'illumos-gate'
 
-[development/nexenta/autobuilder]
-checkout = hg clone 'http://hg.nexenta.org/autobuilder' 'autobuilder'
+[development/illumos-extra]
+checkout = git clone 'https://github.com/joyent/illumos-extra.git' 'illumos-extra'
 
-[development/nexenta/nexenta-gate]
-checkout = hg clone 'http://hg.nexenta.org/nexenta-gate' 'nexenta-gate'
-
-#personal
-[wiki.src]
+#local stuffs
+[wiki]
 checkout = git clone git://home/kartik/wiki.git
 
-[development/github/talks]
-checkout = git clone 'git@github.com:kartikm/talks.git' 'talks'
-
-[development/github/resume]
-checkout = git clone 'git@github.com:kartikm/resume.git' 'resume'
-
 #configs
-[development/github/dotfiles]
-checkout = git clone 'git@github.com:kartikm/dotfiles.git' 'dotfiles'
-
 [development/configs/awesome-config]
 checkout = git clone 'git://gitorious.org/awesome-config/awesome-config.git' 'awesome-config'
 
@@ -118,34 +94,62 @@ checkout = git clone 'http://github.com/JackH79/.dotfiles.git' '.dotfiles'
 [development/configs/oh-my-zsh]
 checkout = git clone 'http://github.com/robbyrussell/oh-my-zsh.git' 'oh-my-zsh'
 
+[development/configs/vasudev-conffiles]
+checkout = git clone 'git://gitorious.org/personal-configuration-files/conffiles.git' 'vasudev-conffiles'
+
 #books
-[development/misc/svnbook/trunk]
+[development/books/svnbook/trunk]
 checkout = svn co 'http://svnbook.googlecode.com/svn/trunk' 'trunk'
 
-[development/misc/progit]
+[development/books/progit]
 checkout = git clone 'git://github.com/progit/progit.git' 'progit'
 
-[development/misc/hgbook]
+[development/books/hgbook]
 checkout = hg clone 'http://bitbucket.org/bos/hgbook' 'hgbook'
 
+[development/books/learn-c-the-hard-way]
+checkout = git clone 'git://gitorious.org/learn-c-the-hard-way/learn-c-the-hard-way.git' 'learn-c-the-hard-way'
+
 #misc
-[development/tmp/inception]
+[development/misc/inception]
 checkout = git clone 'http://github.com/karthick18/inception.git' 'inception'
 
-[development/tmp/patch-tracker]
+[development/misc/patch-tracker]
 checkout = git clone 'http://git.debian.org/git/users/seanius/patch-tracker.git' 'patch-tracker'
 
-[development/tmp/firesheep]
+[development/misc/firesheep]
 checkout = git clone 'http://github.com/codebutler/firesheep.git' 'firesheep'
 
-[development/tmp/misc]
-checkout = hg clone 'http://bitbucket.org/anilg/misc' 'misc'
-
-[development/tmp/showpdf]
+[development/misc/showpdf]
 checkout = git clone 'git://github.com/sitaramc/showpdf.git' 'showpdf'
 
-[development/Android-Terminal-Emulator]
-checkout = git clone 'https://github.com/jackpal/Android-Terminal-Emulator.git' 'Android-Terminal-Emulator'
+[development/misc/Android-Terminal-Emulator]
+checkout = git clone 'git://github.com/jackpal/Android-Terminal-Emulator.git' 'Android-Terminal-Emulator'
 
 [development/debian/talks/packaging-tutorial]
 checkout = git clone 'git://git.debian.org/users/lucas/packaging-tutorial.git' 'packaging-tutorial'
+
+[development/upstreams/aspell-lang]
+checkout = cvs -d ':pserver:anonymous@cvs.savannah.gnu.org:/sources/aspell' co -d 'aspell-lang' 'aspell-lang'
+
+[development/misc/firegpg]
+checkout = git clone 'https://github.com/firegpg/firegpg.git' 'firegpg'
+
+[development/sixthsense/gitrepo/sixthsense]
+checkout = git clone 'git@github.com:sixthsense/sixthsense.git' 'sixthsense'
+
+#my gitorious repos
+[development/gitorious/aspell-gu]
+checkout = git clone 'git@gitorious.org:gujarati-resources/aspell-gu.git' 'aspell-gu'
+
+[development/gitorious/dotfiles]
+checkout = git clone 'git@gitorious.org:kartik/dotfiles.git' 'dotfiles'
+
+[development/gitorious/gu-wordlist]
+checkout = git clone 'git@gitorious.org:gujarati-resources/gu-wordlist.git' 'gu-wordlist'
+
+[development/gitorious/gu-fonts]
+checkout = git clone 'git@gitorious.org:gujarati-resources/gu-fonts.git' 'gu-fonts'
+
+[development/gitorious/cv]
+checkout = git clone 'git@gitorious.org:kartik/cv.git' 'cv'

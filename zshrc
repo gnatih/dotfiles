@@ -1,20 +1,19 @@
 ### .zshrc Kartik's zshrc
-### Main Author: Baishampayan Ghose <b.ghose at gmail.com>
-### URL: http://github.com/ghoseb/zshrc
-### Current Author: Kartik Mistry <assume email id here>
+### Config is thanks to following:
+### Baishampayan Ghose <http://github.com/ghoseb/zshrc>
+### Mika <http://grml.org/zsh-pony/>
 
 # Load the completions stuff
 autoload -U compinit
 compinit
 
-# Load the prompt stuff
 autoload -U promptinit
 promptinit
 
 # History settings
 HISTFILE=~/.zshistory
-SAVEHIST=9000
-HISTSIZE=9000
+SAVEHIST=100000
+HISTSIZE=100000
 DIRSTACKSIZE=30
 
 # ZSH Options
@@ -76,8 +75,17 @@ local white="%{"$'\e[1;37m'"%}"
 local NOCOLOR="%{"$'\e[0m'"%}"
 local NEWLINE="%{"$'\e[80D'"%}"
 
+# support colors in less
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
 # Prompt
-export PS1="${GRAY}[${GREEN}%n@%m:%~/${GRAY}]${RED}%#$NOCOLOR "
+export PS1="${GRAY}[${GREEN}%n@%m: %~/ ${GRAY}]${RED}%#$NOCOLOR "
 export PS2="%_> "
 export RPS1=""
 
@@ -89,7 +97,7 @@ bindkey -e
 
 # ENV
 export PAGER=/usr/bin/less
-export PATH=~/bin:$PATH
+export PATH=~/.bin:$PATH
 
 # Completion styles
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -126,10 +134,10 @@ alias cl='clear'
 alias c=cl
 alias cls=cl
 alias mv='nocorrect mv -i'      # no spelling correction on mv
-alias cp='nocorrect cp'		# no spelling correction on cp
-alias mkdir='nocorrect mkdir'	# no spelling correction on mkdir
-alias vi='vim'			# Vi IMproved
-alias rm='nocorrect rm -i'	# interactive RM
+alias cp='nocorrect cp'         # no spelling correction on cp
+alias mkdir='nocorrect mkdir'   # no spelling correction on mkdir
+alias vi='vim'                  # Vi IMproved
+alias rm='nocorrect rm -i'      # interactive RM
 alias l="ls -GlAh --color"
 alias ls="ls --color=auto -Fh --group-directories-first"
 alias latest="ls -lct1"
@@ -141,31 +149,33 @@ alias ff='iceweasel'
 alias psprunge="curl -s -F 'sprunge=<-' http://sprunge.us | xclip -i -selection clipboard"
 alias grep='grep --colour=auto'
 alias diff='colordiff'
-alias vless='/usr/share/vim/vim73/macros/less.sh' #Depends on your vim version!
 alias cd..='cd ..'
 alias .='pwd'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias cl='clear'
 alias sl=ls
+alias aria2c='aria2c --file-allocation=none'
+alias copy='rsync -aP'
+alias spk='vim ~/.ssh/known_hosts'
+alias gu-check='for i in */gu.po; do echo -n "$i: "; msgfmt $i -cv -o /dev/null; done;'
 
+# useless stuffs
+alias nyan='nc -v miku.acm.uiuc.edu 23' # nyan cat
+alias debs-by-size='grep-status -FStatus -sInstalled-Size,Package -n "install ok installed" | paste -sd "  \n" | sort -rn'
+alias stardate='date "+%y%m.%d/%H%M"'   # from Joey
 
-#debian packaging
+# Debian packaging
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
-alias declean='sudo apt-get remove `deborphan`'
-alias pcopy='cp /var/cache/pbuilder/result/$1 .'
-alias lintian='lintian -iIEvm --pedantic -o --color auto'
+alias lintian='lintian -iIEcv --pedantic --color auto'
+
 export DEBEMAIL="kartik@debian.org"
 export DEBFULLNAME="Kartik Mistry"
 
-#svn buildpackage (from trunk!)
-alias svn-b='svn-buildpackage --svn-builder="pdebuild --buildresult `pwd`/../build-area" --svn-ignore'
-alias svn-br='svn-b --svn-dont-purge --svn-reuse'
-alias svn-bt='svn-buildpackage --svn-tag-only'
-
-#from Joey :)
-alias stardate='date "+%y%m.%d/%H%M"'
+# some stats
+alias debs-by-size='grep-status -FStatus -sInstalled-Size,Package -n "install ok installed" | paste -sd "  \n" | sort -rn'
+alias top10='print -l ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
 
 # fortunes-debian-hints
 if [ -x /usr/games/fortune ]; then
@@ -173,24 +183,24 @@ if [ -x /usr/games/fortune ]; then
  echo ""
 fi
 
-# Disables the bloody CapsLock button
+# disables the bloody CapsLock button
 if [ "$PS1" ]; then
  xmodmap -e "remove lock = Caps_Lock"
 fi
 
-# Utility functions
+# utility functions
 
 # license check foo
 # By: Kartik Mistry
 lcheck() {
- licensecheck -r --copyright > ../license-report.txt
+ licensecheck -r --copyright . > ../license-report.txt
  echo "----------------------------------------------" >> ../license-report.txt
  echo "And, We've probably found some more things...." >> ../license-report.txt
  echo "----------------------------------------------" >> ../license-report.txt
  grep -irn "License" * >> ../license-report.txt
 }
 
-#histroy
+# histroy
 h() { if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi; }
 
 # wget like progress bar for cp
@@ -216,17 +226,17 @@ strace -q -ewrite cp -- "${1}" "${2}" 2>&1 \
 # only upgrade installed packages
 # source: http://www.df7cb.de/blog/2010/Upgrading_only_installed_packages.html
 safe_upgrade () {
-	if [ "$*" ] ; then
-		set -- $(dpkg -l "$@" | grep ^ii | awk '{ print $2 }')
-		if [ "$*" ] ; then
-			echo "apt-get install $@"
-			sudo apt-get install "$@"
-		else
-			echo "Nothing to upgrade"
-		fi
-	else
-		sudo apt-get upgrade
-	fi
+ if [ "$*" ] ; then
+  set -- $(dpkg -l "$@" | grep ^ii | awk '{ print $2 }')
+   if [ "$*" ] ; then
+    echo "apt-get install $@"
+    sudo apt-get install "$@"
+   else
+  echo "Nothing to upgrade"
+ fi
+ else
+  sudo apt-get upgrade
+ fi
 }
 
 # cd+ls
@@ -235,7 +245,7 @@ cdl () {
  cd $1; ls;
 }
 
-# Misc.
+# misc
 source ~/.oh-my-zsh/plugins/deb/deb.plugin.zsh
 source ~/.oh-my-zsh/plugins/debian/debian.plugin.zsh
 
