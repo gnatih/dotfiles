@@ -1,0 +1,34 @@
+#!/bin/sh
+# Author: Kartik Mistry <kartik.mistry@gmail.com>
+
+DOT='/home/kartik/development/gitorious/dotfiles'
+echo $DOT
+
+clear
+
+cp ~/.bashrc               $DOT/bashrc
+cp ~/.gbp.conf             $DOT/gbp.conf
+cp ~/.gitconfig            $DOT/gitconfg
+cp ~/.mrconfig             $DOT/mrconfig
+cp ~/.quiltrc              $DOT/quiltrc
+cp ~/.screenrc             $DOT/screenrc
+cp ~/.vimrc                $DOT/vimrc
+cp ~/.zshrc                $DOT/zshrc
+cp ~/.bin/sync-dotfiles    $DOT/bin/sync-dotfiles
+cp ~/.bin/make-tar         $DOT/bin/make-tar
+cp ~/.bin/whatip           $DOT/bin/whatip
+cp -r ~/.config/awesome/*  $DOT/config/awesome
+cp /etc/apt/sources.list   $DOT/sources.list.home
+dpkg --get-selections  >   $DOT/packages.txt
+
+echo "Config files copied. Now commit!"
+
+cd $DOT
+
+# show what has been changed (and exit).
+git status
+
+# Disabled auto-commit, need smart way here.
+#git add *
+#git commit -m "Sync up-to-date config files"
+#git push

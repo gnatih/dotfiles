@@ -1,0 +1,3 @@
+#!/bin/sh
+
+tar -cvjf $1.bz2 $1
